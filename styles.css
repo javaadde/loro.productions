@@ -1018,7 +1018,7 @@ body.menu-open .site-header {
   }
 
   .strip-img {
-    width: 100%;
+    width: min(100%, 88vw);
   }
 
   .nav-pill,
