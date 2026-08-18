@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 27% 7%;
+    --foreground: 30 20% 96%;
+    --card: 222 23% 10%;
+    --card-foreground: 30 20% 96%;
+    --primary: 15 100% 63%;
+    --primary-foreground: 20 20% 98%;
+    --secondary: 220 18% 15%;
+    --secondary-foreground: 30 20% 96%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 30 8% 68%;
+    --accent: 15 100% 63%;
+    --accent-foreground: 20 20% 98%;
+    --border: 0 0% 100% / 0.12;
+    --input: 0 0% 100% / 0.12;
+    --ring: 15 100% 63%;
+    --radius: 1.2rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    margin: 0;
+    min-width: 320px;
+    background-image:
+      radial-gradient(circle at top, rgba(255, 111, 76, 0.14), transparent 30%),
+      linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 20%);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

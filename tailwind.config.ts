@@ -2,67 +2,63 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./index.html",
+    "./src/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        paper: {
-          50: "#FAF8F5",
-          100: "#F4F1EA",
-          200: "#EFECE4",
-          300: "#E6E2D6",
-          400: "#D8D3C4",
-          500: "#C4BEB0",
-          900: "#1A1918",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        primary: {
+          DEFAULT: "hsl(var(--primary))",
+          foreground: "hsl(var(--primary-foreground))",
         },
-        brand: {
-          orange: "#FF4500",
-          "orange-dark": "#E03C00",
-          "orange-light": "#FF5C1F",
-          charcoal: "#121212",
-          ink: "#0D0D0D",
-          cream: "#F4F1EA",
-          sand: "#EAE5D9",
+        secondary: {
+          DEFAULT: "hsl(var(--secondary))",
+          foreground: "hsl(var(--secondary-foreground))",
+        },
+        muted: {
+          DEFAULT: "hsl(var(--muted))",
+          foreground: "hsl(var(--muted-foreground))",
+        },
+        accent: {
+          DEFAULT: "hsl(var(--accent))",
+          foreground: "hsl(var(--accent-foreground))",
+        },
+        card: {
+          DEFAULT: "hsl(var(--card))",
+          foreground: "hsl(var(--card-foreground))",
         },
       },
       fontFamily: {
-        pixel: ["var(--font-pixel-heading)", "Pixelify Sans", "sans-serif"],
-        silkscreen: ["Silkscreen", "monospace"],
-        sans: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
-        mono: ["var(--font-space-mono)", "monospace"],
+        sans: ["Inter", "system-ui", "sans-serif"],
+        mono: ["IBM Plex Mono", "monospace"],
       },
       backgroundImage: {
-        'grain-pattern': "radial-gradient(rgba(18, 18, 18, 0.08) 1px, transparent 1px)",
-        'retro-grid': "linear-gradient(to right, rgba(18, 18, 18, 0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(18, 18, 18, 0.04) 1px, transparent 1px)",
+        spotlight: "radial-gradient(circle at top, rgba(255,130,92,0.22), transparent 34%), radial-gradient(circle at 20% 20%, rgba(255,255,255,0.06), transparent 22%)",
       },
       animation: {
-        'float-slow': 'float 8s ease-in-out infinite',
-        'float-medium': 'float 5s ease-in-out infinite',
-        'pulse-glow': 'pulseGlow 3s ease-in-out infinite',
-        'marquee': 'marquee 25s linear infinite',
+        float: "float 6s ease-in-out infinite",
+        pulseLine: "pulseLine 4s ease-in-out infinite",
       },
       keyframes: {
         float: {
-          '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
-          '50%': { transform: 'translateY(-12px) rotate(1deg)' },
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(-10px)" },
         },
-        pulseGlow: {
-          '0%, 100%': { opacity: '0.4' },
-          '50%': { opacity: '0.9' },
-        },
-        marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' },
+        pulseLine: {
+          "0%, 100%": { opacity: "0.35" },
+          "50%": { opacity: "0.75" },
         },
       },
-      boxShadow: {
-        'brutalist': '4px 4px 0px 0px #121212',
-        'brutalist-lg': '8px 8px 0px 0px #121212',
-        'brutalist-orange': '6px 6px 0px 0px #FF4500',
-        'brutalist-sm': '2px 2px 0px 0px #121212',
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
     },
   },

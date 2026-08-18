@@ -2,8 +2,9 @@ packages:
   - '.'
 
 allowBuilds:
+  esbuild: true
   unrs-resolver: true
 
 onlyBuiltDependencies:
+  - esbuild
   - unrs-resolver
-  - '@next/swc-linux-x64-gnu'
