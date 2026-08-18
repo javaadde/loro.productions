@@ -1010,6 +1010,17 @@ body.menu-open .site-header {
    Responsive
    ============================================================ */
 @media (max-width: 720px) {
+  .section,
+  .strip,
+  .site-footer {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .strip-img {
+    width: 100%;
+  }
+
   .nav-pill,
   .sign-in {
     display: none;
