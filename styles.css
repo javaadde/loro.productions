@@ -15,6 +15,7 @@
 /* ---------- Tokens ---------- */
 :root {
   --bg: #ebe2cf;
+  --bg-elevated: rgba(248, 241, 228, 0.8);
   --text: #17140f;
   --muted: #7c7365;
   --accent: #ff4d00;
@@ -103,8 +104,6 @@ button {
   width: clamp(40px, 4.4vw, 46px);
   height: clamp(40px, 4.4vw, 46px);
   border-radius: 50%;
-  background: #fff;
-  box-shadow: var(--nav-shadow);
   display: grid;
   place-items: center;
   transition: transform 0.3s ease;
@@ -127,8 +126,11 @@ button {
   height: clamp(44px, 5.2vw, 48px);
   padding: 4px 8px;
   border-radius: 999px;
-  background: #fff;
+  background: var(--bg-elevated);
   box-shadow: var(--nav-shadow);
+  border: 1px solid rgba(23, 20, 15, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
