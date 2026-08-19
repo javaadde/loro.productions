@@ -49,9 +49,8 @@
       name="twitter:image"
       content="https://loro-productions.vercel.app/social-preview.png"
     />
-    <link rel="icon" type="image/webp" href="assets/logo.webp" />
+    <link rel="icon" type="image/webp" href="/assets/logo.webp" />
 
-    <!-- Inter (UI) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -59,23 +58,20 @@
       rel="stylesheet"
     />
 
-    <!-- BubbledotICG-FinePos (display) -->
     <link rel="preconnect" href="https://db.onlinewebfonts.com" crossorigin />
     <link
       href="https://db.onlinewebfonts.com/c/8cb707a9b8a73f8a7403336b861c3074?family=BubbledotICG-FinePos"
       rel="stylesheet"
     />
 
-    <!-- Geist Pixel Circle (local fallback display) -->
     <link
       rel="preload"
-      href="fonts/GeistPixel-Circle.woff2"
+      href="/fonts/GeistPixel-Circle.woff2"
       as="font"
       type="font/woff2"
       crossorigin
     />
 
-    <!-- Font Awesome 6.5.2 (brand icons) -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
     <link
       rel="stylesheet"
@@ -84,320 +80,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- ============ First viewport ============ -->
-    <div class="page">
-      <!-- 1) Header -->
-      <header class="site-header">
-        <a class="logo" href="#" aria-label="Loro Productions — Home">
-          <img src="assets/logo.webp" alt="" width="52" height="52" />
-        </a>
-
-        <nav class="nav-pill" aria-label="Primary">
-          <a href="#works" class="nav-link active" aria-current="page">Works</a>
-          <a href="#about" class="nav-link">About</a>
-          <a href="#reviews" class="nav-link">Reviews</a>
-          <a href="#contact" class="nav-link">Contact</a>
-        </nav>
-
-        <a class="sign-in" href="tel:+917602937442">
-          <i class="fa-solid fa-phone" aria-hidden="true"></i>+91 7602937442
-        </a>
-
-        <button
-          class="burger"
-          id="burger"
-          type="button"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="mobileMenu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </header>
-
-      <!-- 2) Hero -->
-      <main class="hero">
-        <div class="hero-inner">
-          <div class="trust anim" style="--d: 0.05s">
-            <span class="avatar a1">
-              <span class="avatar-inner"
-                ><i class="fa-brands fa-youtube" aria-hidden="true"></i
-              ></span>
-            </span>
-            <span class="avatar a2">
-              <span class="avatar-inner"
-                ><i class="fa-brands fa-instagram" aria-hidden="true"></i
-              ></span>
-            </span>
-            <span class="avatar a3">
-              <span class="avatar-inner"
-                ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
-              ></span>
-            </span>
-            <span class="trust-pill">
-              <span class="pill-full"
-                >We craft binge-worthy personal brands.</span
-              >
-              <span class="pill-short">Binge-worthy personal brands</span>
-            </span>
-          </div>
-
-          <h1 class="headline anim">
-            <span class="line line-1">We Don&rsquo;t Just Edit Videos.</span>
-            <span class="line line-2">We Build Category Kings.</span>
-          </h1>
-
-          <p class="subhead anim" id="about" style="--d: 0.28s">
-            &ldquo;Your personal brand is what people say about you when
-            you&rsquo;re not in the room. Great video makes sure they say the
-            right things.&rdquo;
-          </p>
-
-          <a href="#contact" class="cta anim" style="--d: 0.4s"
-            >Become Our Client</a
-          >
-        </div>
-      </main>
-
-      <!-- 3) Stats footer -->
-      <footer class="stats">
-        <div class="stat anim" style="--d: 0.5s">
-          <div class="stat-icon" aria-hidden="true">*</div>
-          <div
-            class="stat-value"
-            data-target="500"
-            data-suffix="+"
-            data-decimals="0"
-          >
-            500+
-          </div>
-          <div class="stat-label">Videos Crafted</div>
-        </div>
-        <div class="stat anim" style="--d: 0.58s">
-          <div class="stat-icon" aria-hidden="true">%</div>
-          <div
-            class="stat-value"
-            data-target="98"
-            data-suffix="%"
-            data-decimals="0"
-          >
-            98%
-          </div>
-          <div class="stat-label">Client Retention</div>
-        </div>
-        <div class="stat anim" style="--d: 0.66s">
-          <div class="stat-icon" aria-hidden="true">#</div>
-          <div
-            class="stat-value"
-            data-target="150"
-            data-suffix="M+"
-            data-decimals="0"
-          >
-            150M+
-          </div>
-          <div class="stat-label">Views Generated</div>
-        </div>
-        <div class="stat anim" style="--d: 0.74s">
-          <div class="stat-icon" aria-hidden="true">&lt;</div>
-          <div
-            class="stat-value"
-            data-target="48"
-            data-suffix="h"
-            data-decimals="0"
-          >
-            48h
-          </div>
-          <div class="stat-label">Avg. Turnaround</div>
-        </div>
-      </footer>
-    </div>
-
-    <!-- ============ Orange circles strip (Figma artwork) ============ -->
-    <section class="strip" aria-hidden="true">
-      <img
-        src="assets/content.png"
-        alt=""
-        class="strip-img"
-        data-reveal
-        loading="lazy"
-      />
-    </section>
-
-    <!-- ============ Services / Process ============ -->
-    <section class="section services" id="works">
-      <div class="services-grid">
-        <div class="service" data-reveal>
-          <div class="service-num" aria-hidden="true">01</div>
-          <h3 class="service-title">Strategy First</h3>
-          <p class="service-copy">
-            We map your category, audience, and angle before a single frame is
-            cut — so every video has a job to do.
-          </p>
-        </div>
-        <div class="service" data-reveal style="--rd: 0.08s">
-          <div class="service-num" aria-hidden="true">02</div>
-          <h3 class="service-title">Production &amp; Edit</h3>
-          <p class="service-copy">
-            Hooks, pacing, sound design, and packaging engineered for
-            binge-worthy watch time.
-          </p>
-        </div>
-        <div class="service" data-reveal style="--rd: 0.16s">
-          <div class="service-num" aria-hidden="true">03</div>
-          <h3 class="service-title">Publish &amp; Compound</h3>
-          <p class="service-copy">
-            Platform-native distribution that turns attention into authority,
-            week after week.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ Reviews ============ -->
-    <section class="section reviews" id="reviews">
-      <h2 class="reviews-title" data-reveal>Reviews</h2>
-
-      <div class="reviews-grid">
-        <div class="review-card" data-reveal>
-          <span class="play" aria-hidden="true"
-            ><i class="fa-solid fa-play"></i
-          ></span>
-          <span class="review-chip">i must</span>
-        </div>
-        <div class="review-card" data-reveal style="--rd: 0.08s">
-          <span class="play" aria-hidden="true"
-            ><i class="fa-solid fa-play"></i
-          ></span>
-          <span class="review-chip">incredible.</span>
-        </div>
-        <div class="review-card" data-reveal style="--rd: 0.16s">
-          <span class="play" aria-hidden="true"
-            ><i class="fa-solid fa-play"></i
-          ></span>
-          <span class="review-chip">out</span>
-        </div>
-      </div>
-
-      <div class="reviews-intro" data-reveal>
-        <h3 class="reviews-lead">
-          These all are the Honest Reviews From Our Real Clients
-        </h3>
-        <a href="#contact" class="btn-orange">Become Our Client</a>
-      </div>
-    </section>
-
-    <!-- ============ CTA banner ============ -->
-    <section class="section banner-wrap" id="contact">
-      <div class="banner" data-reveal>
-        <img
-          src="assets/hero.png"
-          alt="CRT-monitor headed figure presenting the Loro mark"
-          class="banner-img"
-          loading="lazy"
-        />
-        <div class="banner-text">
-          <h2 class="banner-title">Become Our Client</h2>
-          <p class="banner-copy">
-            We craft binge-worthy personal brands. One call is all it takes to
-            start building yours.
-          </p>
-          <a class="btn-dark" href="tel:+917602937442">
-            <i class="fa-solid fa-phone" aria-hidden="true"></i>Call +91
-            7602937442
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ Footer ============ -->
-    <footer class="site-footer">
-      <div class="footer-top">
-        <div class="brand-block">
-          <svg
-            class="barcode"
-            viewBox="0 0 120 30"
-            aria-hidden="true"
-            focusable="false"
-          >
-            <rect x="0" width="3" height="30" />
-            <rect x="5" width="1" height="30" />
-            <rect x="8" width="2" height="30" />
-            <rect x="12" width="1" height="30" />
-            <rect x="15" width="1" height="30" />
-            <rect x="18" width="3" height="30" />
-            <rect x="23" width="2" height="30" />
-            <rect x="27" width="2" height="30" />
-            <rect x="31" width="1" height="30" />
-            <rect x="34" width="3" height="30" />
-            <rect x="39" width="1" height="30" />
-            <rect x="42" width="2" height="30" />
-            <rect x="46" width="3" height="30" />
-            <rect x="51" width="1" height="30" />
-            <rect x="54" width="1" height="30" />
-            <rect x="57" width="2" height="30" />
-            <rect x="61" width="3" height="30" />
-            <rect x="66" width="1" height="30" />
-            <rect x="69" width="2" height="30" />
-            <rect x="73" width="2" height="30" />
-            <rect x="77" width="1" height="30" />
-            <rect x="80" width="3" height="30" />
-            <rect x="85" width="2" height="30" />
-            <rect x="89" width="1" height="30" />
-            <rect x="92" width="1" height="30" />
-            <rect x="95" width="3" height="30" />
-            <rect x="100" width="2" height="30" />
-            <rect x="104" width="1" height="30" />
-            <rect x="107" width="2" height="30" />
-            <rect x="111" width="3" height="30" />
-            <rect x="116" width="1" height="30" />
-          </svg>
-          <div class="brand-name">Loro Productions</div>
-          <div class="brand-serial">System Serial // SS-2026-LORO</div>
-        </div>
-
-        <div class="socials">
-          <a href="#" aria-label="Instagram"
-            ><i class="fa-brands fa-instagram" aria-hidden="true"></i
-          ></a>
-          <a href="#" aria-label="X (Twitter)"
-            ><i class="fa-brands fa-x-twitter" aria-hidden="true"></i
-          ></a>
-          <a href="#" aria-label="LinkedIn"
-            ><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i
-          ></a>
-          <a href="#" aria-label="YouTube"
-            ><i class="fa-brands fa-youtube" aria-hidden="true"></i
-          ></a>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 Loro Productions. All rights reserved.</p>
-        <nav class="footer-legal" aria-label="Legal">
-          <a href="#">Privacy Protocol</a>
-          <a href="#">Terms of Service</a>
-        </nav>
-      </div>
-    </footer>
-
-    <!-- Mobile menu -->
-    <div class="overlay" id="overlay" hidden></div>
-    <nav class="mobile-menu" id="mobileMenu" hidden aria-label="Mobile">
-      <a href="#works" class="m-link active">Works</a>
-      <a href="#about" class="m-link">About</a>
-      <a href="#reviews" class="m-link">Reviews</a>
-      <a href="#contact" class="m-link">Contact</a>
-      <a href="tel:+917602937442" class="m-signin">
-        <i class="fa-solid fa-phone" aria-hidden="true"></i>+91 7602937442
-      </a>
-    </nav>
-
-    <script type="module" src="main.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
