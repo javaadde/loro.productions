@@ -70,32 +70,30 @@ export function SiteHeader({ navItems, menuOpen, onMenuToggle }: SiteHeaderProps
         aria-controls="mobileMenu"
         onClick={onMenuToggle}
         className={cn(
-          "relative hidden h-12 w-12 rounded-full bg-[#28282a] shadow-[0_4px_14px_rgba(0,0,0,0.16)] transition-colors duration-300 max-[720px]:block",
-          menuOpen && "bg-white",
+          "hidden h-12 items-center gap-2 rounded-full border border-black/15 bg-[#28282a] px-4 text-[#f8f1e4] shadow-[0_4px_14px_rgba(0,0,0,0.16)] transition-[transform,background-color,color] duration-300 active:scale-95 max-[720px]:inline-flex",
+          menuOpen && "bg-[#f45517] text-[#17140f]",
         )}
       >
-        {[0, 1, 2].map((line) => (
-          <span
-            key={line}
-            className={cn(
-              "absolute left-1/2 top-1/2 h-[1.5px] w-[18px] -translate-x-1/2 rounded-[2px] bg-white transition-all duration-300",
-              line === 1 && menuOpen && "opacity-0",
-              menuOpen && "bg-black",
-            )}
-            style={{
-              transform:
-                line === 0
-                  ? menuOpen
-                    ? "translate(-50%, -50%) rotate(45deg)"
-                    : "translate(-50%, -50%) translateY(-6.5px)"
-                  : line === 1
-                    ? "translate(-50%, -50%)"
-                    : menuOpen
-                      ? "translate(-50%, -50%) rotate(-45deg)"
-                      : "translate(-50%, -50%) translateY(6.5px)",
-            }}
-          />
-        ))}
+        <span className="font-display text-[22px] uppercase leading-none tracking-[-0.08em]">
+          {menuOpen ? "Close" : "Menu"}
+        </span>
+        <span
+          aria-hidden="true"
+          className={cn(
+            "grid grid-cols-2 gap-[3px] transition-transform duration-300",
+            menuOpen && "rotate-45",
+          )}
+        >
+          {[0, 1, 2, 3].map((dot) => (
+            <span
+              key={dot}
+              className={cn(
+                "h-[4px] w-[4px] bg-[#f45517] transition-colors duration-300",
+                menuOpen && "bg-[#17140f]",
+              )}
+            />
+          ))}
+        </span>
       </button>
     </header>
   );

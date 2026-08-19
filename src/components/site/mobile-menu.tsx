@@ -1,5 +1,4 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { X } from "lucide-react";
 import { Phone } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -65,9 +64,16 @@ export function MobileMenu({ open, navItems, onClose }: MobileMenuProps) {
                 type="button"
                 aria-label="Close menu"
                 onClick={onClose}
-                className="grid h-10 w-10 place-items-center rounded-full border border-black/10 bg-black text-white transition-colors duration-200 hover:bg-black/85"
+                className="inline-flex h-12 items-center gap-2 rounded-full border border-black/15 bg-[#f45517] px-4 text-[#17140f] shadow-[0_4px_14px_rgba(0,0,0,0.12)] transition-transform duration-300 active:scale-95"
               >
-                <X className="h-4 w-4" />
+                <span className="font-display text-[22px] uppercase leading-none tracking-[-0.08em]">
+                  Close
+                </span>
+                <span aria-hidden="true" className="grid rotate-45 grid-cols-2 gap-[3px]">
+                  {[0, 1, 2, 3].map((dot) => (
+                    <span key={dot} className="h-[4px] w-[4px] bg-[#17140f]" />
+                  ))}
+                </span>
               </button>
             </motion.div>
 
