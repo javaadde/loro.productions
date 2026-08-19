@@ -11,6 +11,20 @@ const reveal = {
   animate: { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" },
 };
 
+const BADGE_TEXTS = [
+  "We craft binge-worthy personal brands.",
+  "We turn viewers into superfans.",
+  "We edit short-form that converts.",
+  "We build category kings.",
+];
+
+const BADGE_TEXTS_MOBILE = [
+  "Binge-worthy personal brands",
+  "Viewers into superfans",
+  "Short-form that converts",
+  "Build category kings",
+];
+
 export function HeroSection({ onContactClick }: HeroSectionProps) {
   const shouldReduceMotion = useReducedMotion();
 
@@ -24,23 +38,39 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
           className="mb-[clamp(16px,2.5vh,26px)] inline-flex items-center"
         >
           <div className="relative z-[1] grid h-[clamp(36px,4.5vw,42px)] w-[clamp(36px,4.5vw,42px)] place-items-center rounded-full border border-black/15 bg-[#28282a] p-[5px] transition-transform duration-300 hover:-translate-y-0.5 max-[420px]:h-[34px] max-[420px]:w-[34px]">
-            <span className="grid h-full w-full place-items-center rounded-full bg-white text-[calc(clamp(36px,4.5vw,42px)*0.34)] text-[#111]">
+            <span className="grid h-full w-full place-items-center rounded-full bg-white text-[calc(clamp(36px,4.5vw,42px)*0.38)] text-[#111]">
               <i className="fa-brands fa-youtube" aria-hidden="true" />
             </span>
           </div>
-          <div className="relative z-[2] -ml-[calc(clamp(36px,4.5vw,42px)*0.42)] grid h-[clamp(36px,4.5vw,42px)] w-[clamp(36px,4.5vw,42px)] place-items-center rounded-full border border-black/15 bg-[#28282a] p-[5px] transition-transform duration-300 hover:-translate-y-1 max-[420px]:h-[34px] max-[420px]:w-[34px]">
-            <span className="grid h-full w-full place-items-center rounded-full bg-white text-[calc(clamp(36px,4.5vw,42px)*0.34)] text-[#111]">
-              <i className="fa-brands fa-instagram" aria-hidden="true" />
-            </span>
-          </div>
-          <div className="relative z-[4] -ml-[calc(clamp(36px,4.5vw,42px)*0.42)] grid h-[clamp(36px,4.5vw,42px)] w-[clamp(36px,4.5vw,42px)] place-items-center rounded-full border border-black/15 bg-[#28282a] p-[5px] transition-transform duration-300 hover:-translate-y-0.5 max-[420px]:h-[34px] max-[420px]:w-[34px]">
-            <span className="grid h-full w-full place-items-center rounded-full bg-white text-[calc(clamp(36px,4.5vw,42px)*0.34)] text-[#111]">
+          <div className="relative z-[2] -ml-[calc(clamp(36px,4.5vw,42px)*0.42)] grid h-[clamp(36px,4.5vw,42px)] w-[clamp(36px,4.5vw,42px)] place-items-center rounded-full border border-black/15 bg-[#28282a] p-[5px] transition-transform duration-300 hover:-translate-y-0.5 max-[420px]:h-[34px] max-[420px]:w-[34px]">
+            <span className="grid h-full w-full place-items-center rounded-full bg-white text-[calc(clamp(36px,4.5vw,42px)*0.38)] text-[#111]">
               <i className="fa-brands fa-linkedin-in" aria-hidden="true" />
             </span>
           </div>
-          <div className="-ml-[calc(clamp(36px,4.5vw,42px)*0.42)] inline-flex h-[clamp(36px,4.5vw,42px)] items-center rounded-full border border-black/15 bg-[#28282a] pl-[calc(clamp(36px,4.5vw,42px)*0.58)] pr-[clamp(14px,2vw,20px)] text-[clamp(12px,1.4vw,13.5px)] font-medium tracking-[-0.01em] text-[#c4c2c3] max-[420px]:text-[12px]">
-            <span className="max-[420px]:hidden">We craft binge-worthy personal brands.</span>
-            <span className="hidden max-[420px]:inline">Binge-worthy personal brands</span>
+          <div className="relative z-[4] -ml-[calc(clamp(36px,4.5vw,42px)*0.42)] grid h-[clamp(36px,4.5vw,42px)] w-[clamp(36px,4.5vw,42px)] place-items-center rounded-full border border-black/15 bg-[#28282a] p-[5px] transition-transform duration-300 hover:-translate-y-1 max-[420px]:h-[34px] max-[420px]:w-[34px]">
+            <span className="grid h-full w-full place-items-center rounded-full bg-white text-[calc(clamp(36px,4.5vw,42px)*0.38)] text-[#111]">
+              <i className="fa-brands fa-instagram" aria-hidden="true" />
+            </span>
+          </div>
+          <div className="-ml-[calc(clamp(36px,4.5vw,42px)*0.42)] inline-flex h-[clamp(36px,4.5vw,42px)] w-[240px] items-center overflow-hidden rounded-full border border-black/15 bg-[#28282a] pl-[calc(clamp(36px,4.5vw,42px)*0.58)] pr-[clamp(14px,2vw,20px)] font-medium tracking-[-0.01em] text-[#c4c2c3] max-[420px]:h-[34px] max-[420px]:w-[180px]">
+            <motion.span
+              initial={shouldReduceMotion ? false : { x: "0%" }}
+              animate={shouldReduceMotion ? undefined : { x: ["0%", "-50%"] }}
+              transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+              className="inline-flex w-max shrink-0 items-center whitespace-nowrap text-[clamp(11px,1.3vw,13px)] max-[420px]:text-[11px]"
+            >
+              {[...BADGE_TEXTS, ...BADGE_TEXTS].map((text, i) => (
+                <span key={i} className="inline-flex items-center">
+                  <span className="max-[420px]:hidden">{text}</span>
+                  <span className="hidden max-[420px]:inline">
+                    {BADGE_TEXTS_MOBILE[i % BADGE_TEXTS.length]}
+                  </span>
+                  <span aria-hidden="true" className="mx-[1.1em] opacity-60">
+                    •
+                  </span>
+                </span>
+              ))}
+            </motion.span>
           </div>
         </motion.div>
 
