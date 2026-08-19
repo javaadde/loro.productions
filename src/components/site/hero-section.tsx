@@ -52,11 +52,11 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
               <i className="fa-brands fa-instagram" aria-hidden="true" />
             </span>
           </div>
-          <div className="-ml-[calc(clamp(36px,4.5vw,42px)*0.42)] inline-flex h-[clamp(36px,4.5vw,42px)] w-[240px] items-center overflow-hidden rounded-full border border-black/15 bg-[#28282a] pl-[calc(clamp(36px,4.5vw,42px)*0.58)] pr-[clamp(14px,2vw,20px)] font-medium tracking-[-0.01em] text-[#c4c2c3] max-[420px]:h-[34px] max-[420px]:w-[180px]">
+          <div className="-ml-[calc(clamp(36px,4.5vw,42px)*0.42)] inline-flex h-[clamp(36px,4.5vw,42px)] w-[440px] items-center overflow-hidden rounded-full border border-black/15 bg-[#28282a] pl-[calc(clamp(36px,4.5vw,42px)*0.58)] pr-[clamp(14px,2vw,20px)] font-medium tracking-[-0.01em] text-[#c4c2c3] max-[420px]:h-[34px] max-[420px]:w-[260px]">
             <motion.span
-              initial={shouldReduceMotion ? false : { x: "0%" }}
-              animate={shouldReduceMotion ? undefined : { x: ["0%", "-50%"] }}
-              transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+              initial={shouldReduceMotion ? false : { x: "-50%" }}
+              animate={shouldReduceMotion ? undefined : { x: ["-50%", "0%"] }}
+              transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
               className="inline-flex w-max shrink-0 items-center whitespace-nowrap text-[clamp(11px,1.3vw,13px)] max-[420px]:text-[11px]"
             >
               {[...BADGE_TEXTS, ...BADGE_TEXTS].map((text, i) => (
