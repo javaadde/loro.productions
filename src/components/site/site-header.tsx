@@ -30,7 +30,7 @@ export function SiteHeader({ navItems, menuOpen, onMenuToggle }: SiteHeaderProps
           height={52}
           className="h-7 w-7 object-contain"
         />
-      </a>
+      </a> 
 
       <nav
         aria-label="Primary"
