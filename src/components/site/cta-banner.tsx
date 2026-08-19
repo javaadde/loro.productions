@@ -15,15 +15,17 @@ export function CtaBanner() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.18 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="flex items-center gap-[clamp(20px,4vw,56px)] overflow-hidden rounded-[clamp(20px,3vw,34px)] bg-primary px-[clamp(22px,4.5vw,60px)] py-[clamp(26px,5vh,56px)] max-[720px]:flex-col max-[720px]:text-center"
+        className="flex items-center gap-[clamp(20px,4vw,56px)] overflow-hidden rounded-[clamp(20px,3vw,34px)] bg-primary pl-[clamp(12px,2.4vw,28px)] pr-[clamp(22px,4.5vw,60px)] py-[clamp(26px,5vh,56px)] max-[720px]:flex-col max-[720px]:px-6 max-[720px]:text-center"
       >
-        <img
-          src={heroImage}
-          alt="CRT-monitor headed figure presenting the Loro mark"
-          loading="lazy"
-          className="w-[clamp(200px,28vw,360px)] shrink-0 mix-blend-multiply"
-        />
-        <div>
+        <div className="-mb-[clamp(26px,5vh,56px)] shrink-0 self-end max-[720px]:mb-0 max-[720px]:w-full max-[720px]:self-center max-[720px]:border-b max-[720px]:border-[#17140f]/25 max-[720px]:pb-0 max-[720px]:shadow-[0_16px_22px_-16px_rgba(23,20,15,0.95)]">
+          <img
+            src={heroImage}
+            alt="CRT-monitor headed figure presenting the Loro mark"
+            loading="lazy"
+            className="w-[clamp(280px,36vw,500px)] max-w-none mix-blend-multiply max-[720px]:mx-auto"
+          />
+        </div>
+        <div className="max-[720px]:pb-3 max-[720px]:pt-1">
           <h2 className="font-display text-[clamp(28px,5vw,62px)] font-normal leading-[1.08] tracking-[-0.04em] text-[#17140f]">
             Become Our Client
           </h2>
