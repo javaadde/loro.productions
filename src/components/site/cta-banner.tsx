@@ -8,14 +8,14 @@ export function CtaBanner() {
   return (
     <section
       id="contact"
-      className="mx-auto w-full max-w-[1200px] px-[clamp(20px,6vw,80px)] pb-[clamp(48px,9vh,96px)] pt-[clamp(24px,5vh,48px)] max-[720px]:px-6"
+      className="mx-auto w-full max-w-[1200px] px-[clamp(20px,6vw,80px)] pb-[clamp(48px,9vh,96px)] pt-[clamp(24px,5vh,48px)] max-[720px]:px-8"
     >
       <motion.div
         initial={{ opacity: 0, y: 26 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.18 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="flex items-center gap-[clamp(20px,4vw,56px)] overflow-hidden rounded-[clamp(20px,3vw,34px)] bg-primary pl-[clamp(12px,2.4vw,28px)] pr-[clamp(22px,4.5vw,60px)] py-[clamp(26px,5vh,56px)] max-[720px]:flex-col max-[720px]:px-6 max-[720px]:text-center"
+        className="flex items-center gap-[clamp(20px,4vw,56px)] overflow-hidden rounded-[clamp(20px,3vw,34px)] bg-primary pl-[clamp(12px,2.4vw,28px)] pr-[clamp(22px,4.5vw,60px)] py-[clamp(26px,5vh,56px)] max-[720px]:flex-col max-[720px]:px-8 max-[720px]:text-center"
       >
         <div className="-mb-[clamp(26px,5vh,56px)] shrink-0 self-end max-[720px]:mb-0 max-[720px]:w-full max-[720px]:self-center max-[720px]:border-b max-[720px]:border-[#17140f]/25 max-[720px]:pb-0 max-[720px]:shadow-[0_16px_22px_-16px_rgba(23,20,15,0.95)]">
           <img

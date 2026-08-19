@@ -85,7 +85,7 @@ export default function App() {
 
   return (
     <div className="bg-background text-foreground">
-      <div className="relative z-[1] flex min-h-screen min-h-dvh flex-col items-center overflow-hidden px-[clamp(14px,3vw,32px)] py-[clamp(16px,2.4vh,28px)]">
+      <div className="relative z-[1] flex min-h-screen min-h-dvh flex-col items-center overflow-hidden px-[clamp(20px,4vw,32px)] py-[clamp(16px,2.4vh,28px)]">
         <SiteHeader
           navItems={navItems}
           menuOpen={menuOpen}
@@ -97,7 +97,7 @@ export default function App() {
 
       <section
         aria-hidden="true"
-        className="flex justify-center px-[clamp(20px,6vw,80px)] py-[clamp(12px,3vh,36px)] max-[720px]:px-6"
+        className="flex justify-center px-[clamp(20px,6vw,80px)] py-[clamp(12px,3vh,36px)] max-[720px]:px-8"
       >
         <img
           src={contentImage}

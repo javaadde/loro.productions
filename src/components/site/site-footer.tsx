@@ -1,6 +1,6 @@
 export function SiteFooter() {
   return (
-    <footer className="mx-auto w-full max-w-[1200px] px-[clamp(20px,6vw,80px)] pb-[clamp(20px,3vh,30px)] pt-[clamp(36px,7vh,64px)] max-[720px]:px-6">
+    <footer className="mx-auto w-full max-w-[1200px] px-[clamp(20px,6vw,80px)] pb-[clamp(20px,3vh,30px)] pt-[clamp(36px,7vh,64px)] max-[720px]:px-8">
       <div className="flex flex-wrap items-center justify-between gap-6 pb-[22px] max-[420px]:flex-col max-[420px]:items-start">
         <div>
           <svg

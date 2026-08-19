@@ -15,7 +15,7 @@ export function ServicesSection({ services }: ServicesSectionProps) {
   return (
     <section
       id="works"
-      className="mx-auto w-full max-w-[1200px] px-[clamp(20px,6vw,80px)] py-[clamp(48px,9vh,96px)] max-[720px]:px-6"
+      className="mx-auto w-full max-w-[1200px] px-[clamp(20px,6vw,80px)] py-[clamp(48px,9vh,96px)] max-[720px]:px-8"
     >
       <div className="grid grid-cols-3 gap-[clamp(28px,4vw,56px)] max-[720px]:grid-cols-1 max-[720px]:gap-[30px]">
         {services.map((service, index) => (

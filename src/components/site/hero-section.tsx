@@ -74,7 +74,7 @@ export function HeroSection({ onContactClick }: HeroSectionProps) {
           </div>
         </motion.div>
 
-        <h1 className="max-w-full overflow-hidden whitespace-nowrap font-display text-[clamp(24px,5.8vw,68px)] font-normal leading-[1.12] tracking-[-0.04em] text-[#17140f] max-[720px]:leading-[1.05] max-[720px]:tracking-[-0.08em] max-[420px]:leading-[1.04] max-[420px]:tracking-[-0.09em]">
+        <h1 className="max-w-full overflow-hidden whitespace-nowrap font-display text-[clamp(24px,5.8vw,68px)] font-normal leading-[1.12] tracking-[-0.04em] text-[#17140f] max-[720px]:whitespace-normal max-[720px]:leading-[1.05] max-[720px]:tracking-[-0.08em] max-[420px]:whitespace-normal max-[420px]:text-[clamp(32px,9vw,40px)] max-[420px]:leading-[1.04] max-[420px]:tracking-[-0.09em]">
           <motion.span
             initial={shouldReduceMotion ? false : { opacity: 0, y: 14 }}
             animate={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}

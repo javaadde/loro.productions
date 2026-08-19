@@ -15,7 +15,7 @@ export function ReviewsSection({ reviews }: ReviewsSectionProps) {
   return (
     <section
       id="reviews"
-      className="mx-auto w-full max-w-[1200px] px-[clamp(20px,6vw,80px)] py-[clamp(48px,9vh,96px)] max-[720px]:px-6"
+      className="mx-auto w-full max-w-[1200px] px-[clamp(20px,6vw,80px)] py-[clamp(48px,9vh,96px)] max-[720px]:px-8"
     >
       <motion.h2
         initial={{ opacity: 0, y: 26 }}
