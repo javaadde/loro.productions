@@ -1,6 +1,5 @@
 import { Phone } from "lucide-react";
 
-import logo from "../../../assets/logo.webp";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -20,16 +19,16 @@ export function SiteHeader({ navItems, menuOpen, onMenuToggle }: SiteHeaderProps
   return (
     <header className="relative z-[7] flex w-full max-w-[720px] shrink-0 items-center justify-center gap-[clamp(18px,2.8vw,28px)] motion-safe:animate-[slideDown_0.7s_cubic-bezier(0.22,1,0.36,1)_both] max-[720px]:max-w-none max-[720px]:justify-between">
       <a
-        className="grid h-[clamp(40px,4.4vw,46px)] w-[clamp(40px,4.4vw,46px)] shrink-0 place-items-center rounded-full transition-transform duration-300 hover:scale-105 max-[720px]:h-12 max-[720px]:w-12"
+        className="grid h-[clamp(40px,4.4vw,46px)] min-w-[clamp(76px,8vw,88px)] shrink-0 place-items-center rounded-full border border-black/15 bg-[#f45517] px-3 shadow-[0_4px_14px_rgba(0,0,0,0.16)] transition-transform duration-300 hover:scale-105 max-[720px]:h-12 max-[720px]:min-w-[92px]"
         href="#"
         aria-label="Loro Productions - Home"
       >
         <img
-          src={logo}
+          src="/loro logo black2.png"
           alt=""
           width={52}
           height={52}
-          className="h-[72%] w-[72%] object-contain"
+          className="h-auto w-[clamp(54px,5.8vw,66px)] object-contain max-[720px]:w-[68px]"
         />
       </a>
 
